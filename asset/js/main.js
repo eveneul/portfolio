@@ -1,4 +1,6 @@
 $(function () {
+	//커서 이벤트
+
 	gsap.to('.bg', {
 		autoAlpha: 1,
 		ease: 'power1.in',
@@ -28,15 +30,10 @@ $(function () {
 	});
 
 	$('span').mousemove(function (e) {
-		if (
-			$(e.target).parents('.info-area').length ||
-			$(e.target).parents('.info-item').length ||
-			$(e.target).parents('.title-area').length ||
-			$(e.target).parents('.contact-title').length
-		) {
+		if ($(e.target).parents('.sc-about').length) {
 			$('.cursor').addClass('gradient');
 			$('.cursor').html('<span>scroll</span>');
-		} else if ($(e.target).parents('.addr-box').length) {
+		} else if ($(e.target).parents('.sc-contact').length) {
 			$('.cursor').addClass('gradient');
 			$('.cursor').html('<span>contact me</span>');
 		}
@@ -78,6 +75,8 @@ $(function () {
 		$('.cursor').html('<span>scroll</span>');
 	});
 
+	// orbit
+
 	var path = anime.path('.orbit-context path');
 	var motionPath = anime({
 		targets: '.square',
@@ -89,7 +88,7 @@ $(function () {
 		loop: true,
 	});
 
-	// i try to i learn a lot
+	// text reveal animation
 
 	gsap.to('.orbit .text-area p', {
 		backgroundPositionX: '0%',
@@ -101,77 +100,30 @@ $(function () {
 			end: 'bottom center',
 		},
 	});
-	gsap.from('.sc-contact .title span', {
-		yPercent: 100,
-		duration: 1,
-		scrollTrigger: {
-			trigger: '.sc-contact',
-			start: 'top center',
-		},
+
+	const contactText = $('.sc-contact span');
+	contactText.each((idx, el) => {
+		gsap.from(el, {
+			yPercent: 100,
+			duration: 1,
+			scrollTrigger: {
+				trigger: '.sc-contact',
+				start: 'top center',
+				toggleActions: 'restart none restart none',
+			},
+		});
 	});
 
-	gsap.from('.sc-contact .contact-title span', {
-		yPercent: 100,
-		duration: 1,
-		scrollTrigger: {
-			trigger: '.sc-contact',
-			start: 'top center',
-		},
+	const aboutText = $('.sc-about span');
+	aboutText.each((idx, el) => {
+		gsap.from(el, {
+			yPercent: 100,
+			duration: 1,
+			scrollTrigger: {
+				trigger: '.sc-about',
+				start: 'top center',
+				toggleActions: 'restart none restart restart',
+			},
+		});
 	});
-
-	gsap.from('.sc-contact .addr-box span', {
-		yPercent: 100,
-		duration: 1,
-		scrollTrigger: {
-			trigger: '.sc-contact',
-			start: 'top center',
-		},
-	});
-
-	gsap.from('.phone-num', {
-		yPercent: 100,
-		duration: 1,
-		scrollTrigger: {
-			trigger: '.sc-contact',
-			start: 'top center',
-		},
-	});
-
-	gsap.from('.sc-contact .link-box a', {
-		yPercent: 100,
-		duration: 1,
-		scrollTrigger: {
-			trigger: '.sc-contact',
-			start: 'top center',
-		},
-	});
-
-	gsap.from('.sc-contact .info-item span', {
-		yPercent: 100,
-		duration: 1,
-		scrollTrigger: {
-			trigger: '.sc-contact',
-			start: 'top center',
-		},
-	});
-
-	gsap.from('.sc-about .title-area span', {
-		yPercent: 100,
-		duration: 1,
-		scrollTrigger: {
-			trigger: '.sc-about',
-			start: 'top center',
-		},
-	});
-
-	gsap.from('.sc-about .info-area span', {
-		yPercent: 100,
-		duration: 1,
-		scrollTrigger: {
-			trigger: '.sc-about',
-			start: 'top center',
-		},
-	});
-
-	//
 });
