@@ -29,8 +29,10 @@ $(function () {
 
 	$('span').mousemove(function (e) {
 		if (
-			$(e.target).parents('.info').length ||
-			$(e.target).parents('.info-item').length
+			$(e.target).parents('.info-area').length ||
+			$(e.target).parents('.info-item').length ||
+			$(e.target).parents('.title-area').length ||
+			$(e.target).parents('.contact-title').length
 		) {
 			$('.cursor').addClass('gradient');
 			$('.cursor').html('<span>scroll</span>');
