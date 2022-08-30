@@ -421,8 +421,14 @@ ol {
 .sc-about {
   position: relative;
   width: 100%;
+  height: 100vh;
   background: url(../images/noise-bg.png) repeat;
   z-index: 2;
+}
+@media (max-width: 1024px) {
+  .sc-about {
+    height: auto;
+  }
 }
 .sc-about .content {
   position: relative;
@@ -512,7 +518,7 @@ ol {
 }
 .sc-about i.fa-arrow-down {
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 30px;
@@ -657,7 +663,13 @@ ol {
 
 .sc-contact {
   width: 100%;
+  height: 100vh;
   background: url(../images/noise-bg.png) repeat;
+}
+@media (max-width: 834px) {
+  .sc-contact {
+    height: auto;
+  }
 }
 .sc-contact .content {
   padding: 10px 60px 60px;
