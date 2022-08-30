@@ -1,0 +1,27 @@
+.badge {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 9px 16px;
+	border-radius: 100px;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-family: $font-en;
+	font-size: 16px;
+	letter-spacing: -0.05em;
+	line-height: 1;
+
+	&-web {
+		background-color: #dfdfdf;
+		color: #222;
+	}
+
+	&-skill {
+		border: 2px solid #dfdfdf;
+		color: #fff;
+	}
+
+	& + .badge {
+		margin-left: 10px;
+	}
+}
