@@ -149,7 +149,6 @@
 .sc-about {
 	position: relative;
 	width: 100%;
-	height: 100vh;
 	background: url(../images/noise-bg.png) repeat;
 	z-index: 2;
 	@include desktop {
@@ -160,7 +159,7 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		padding: 10px 60px 60px;
+		padding: 10px 60px 120px;
 
 		@include mobile {
 			padding: 10px 16px 100px;
@@ -385,7 +384,6 @@
 }
 .sc-contact {
 	width: 100%;
-	height: 100vh;
 	background: url(../images/noise-bg.png) repeat;
 	@include tablet {
 		height: auto;
