@@ -151,22 +151,24 @@
 	width: 100%;
 	background: url(../images/noise-bg.png) repeat;
 	z-index: 2;
-	@include desktop {
-		height: auto;
-	}
+	height: 100vh;
+	// @include desktop {
+	// 	height: auto;
+	// }
 
-	.content {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		padding: 10px 60px 120px;
+	// .content {
+	// 	position: relative;
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	padding: 10px 60px 120px;
 
-		@include mobile {
-			padding: 10px 16px 100px;
-		}
-	}
+	// 	@include mobile {
+	// 		padding: 10px 16px 100px;
+	// 	}
+	// }
 
 	.title-area {
+		padding: 10px 60px 0;
 		font-family: $font-en;
 		font-weight: 800;
 		font-size: 160px;
@@ -184,8 +186,13 @@
 			font-size: 64px;
 		}
 
+		@include tablet {
+			padding-left: 40px;
+		}
+
 		@include mobile {
 			font-size: 40px;
+			padding-left: 16px;
 		}
 
 		p {
@@ -199,15 +206,24 @@
 	}
 
 	.info-area {
-		margin-top: 189px;
+		position: absolute;
+		bottom: 160px;
+		right: 60px;
+		// margin-top: 189px;
 		@include desktop-m {
-			margin-top: 120px;
+			bottom: 120px;
 		}
 		@include desktop {
-			margin-top: 80px;
+		}
+
+		@include tablet {
+			right: 40px;
+			bottom: 100px;
 		}
 		@include mobile {
-			margin-top: 240px;
+			bottom: 114px;
+			right: 14px;
+			width: 298px;
 		}
 		p {
 			display: flex;
@@ -383,14 +399,13 @@
 	}
 }
 .sc-contact {
+	position: relative;
 	width: 100%;
+	height: 100vh;
 	background: url(../images/noise-bg.png) repeat;
-	@include tablet {
-		height: auto;
-	}
 
 	.content {
-		padding: 10px 60px 60px;
+		padding: 10px 60px 0px;
 		display: flex;
 		flex-direction: column;
 		font-family: $font-en;
@@ -398,6 +413,9 @@
 		color: #282828;
 		line-height: 1;
 		text-transform: uppercase;
+		@include tablet {
+			// padding: 30px 23px 80px 29px;
+		}
 
 		@include mobile {
 			padding: 10px 16px 60px;
@@ -405,7 +423,7 @@
 	}
 
 	.title-area {
-		margin-bottom: 30px;
+		margin-bottom: 38px;
 	}
 
 	.title {
@@ -432,12 +450,26 @@
 		}
 	}
 
+	.contact-area {
+		@include tablet {
+			position: absolute;
+			top: 50%;
+			right: 23px;
+			transform: translateY(-50%);
+		}
+
+		@include mobile {
+			right: 0;
+			left: 16px;
+		}
+	}
+
 	.contact-title {
 		display: flex;
 		justify-content: flex-end;
 		font-weight: 700;
 		font-size: 64px;
-		margin-bottom: 20px;
+		margin-bottom: 31px;
 		text-align: right;
 		overflow: hidden;
 		@include desktop {
@@ -497,31 +529,159 @@
 		}
 	}
 	.info-area {
-		margin-top: 100px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 
-		@include desktop-m {
-			margin-top: 0;
+		@include tablet {
+			align-items: center;
+			position: absolute;
+			left: 0;
+			bottom: 80px;
+			width: 100%;
+			padding: 0 40px;
+			flex-direction: row;
 		}
-		@include desktop {
-			margin-top: 20px;
-		}
+
 		@include mobile {
-			margin-top: 100px;
+			padding: 0 16px;
+			bottom: 30px;
+			flex-direction: column;
+			align-items: flex-start;
 		}
+
+		// @include desktop-m {
+		// 	margin-top: 0;
+		// }
+		// @include desktop {
+		// 	margin-top: 20px;
+		// }
+		// @include mobile {
+		// 	margin-top: 100px;
+		// }
 
 		.info-list {
 			font-family: $font-kr;
 			font-weight: 500;
 			line-height: 1.4;
-			font-size: 26px;
+			font-size: 32px;
+			margin-bottom: 25px;
 			@include desktop {
 				font-size: 18px;
+			}
+			@include tablet {
+				margin-bottom: 0;
 			}
 			@include mobile {
 				font-size: 14px;
 			}
 			span {
 				display: block;
+			}
+		}
+	}
+
+	@keyframes rotateAnimation {
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	.rotate-article {
+		position: relative;
+		align-self: flex-end;
+		width: 80px;
+		height: 80px;
+		animation: rotateAnimation 12s linear infinite;
+		@include tablet {
+			align-self: center;
+			width: 60px;
+			height: 60px;
+		}
+		@include mobile {
+			align-self: flex-end;
+			width: 40px;
+			height: 40px;
+		}
+		> span {
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+
+			&::after,
+			&::before {
+				content: '';
+				position: absolute;
+				display: block;
+				background-color: #222;
+			}
+		}
+		.str {
+			&::before {
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				display: block;
+				width: 70px;
+				height: 3px;
+				@include tablet {
+					width: 70px;
+				}
+
+				@include mobile {
+					height: 1px;
+					width: 40px;
+				}
+			}
+			&::after {
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				display: block;
+				width: 3px;
+				height: 80px;
+				@include tablet {
+					height: 70px;
+				}
+				@include mobile {
+					width: 1px;
+					height: 40px;
+				}
+			}
+		}
+		.rotate {
+			&::before {
+				left: 50%;
+				transform: translateX(-50%) rotate(45deg);
+				transform-origin: center center;
+				width: 3px;
+				height: 80px;
+				@include tablet {
+					height: 70px;
+					top: -4px;
+				}
+				@include mobile {
+					width: 1px;
+					height: 40px;
+					top: 0;
+				}
+			}
+			&::after {
+				left: 50%;
+				transform: translateX(-50%) rotate(-45deg);
+				transform-origin: center center;
+				width: 3px;
+				height: 80px;
+				@include tablet {
+					height: 70px;
+					top: -4px;
+				}
+				@include mobile {
+					width: 1px;
+					height: 40px;
+					top: 0;
+				}
 			}
 		}
 	}
