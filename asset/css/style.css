@@ -577,6 +577,8 @@ ol {
 }
 .sc-works .works-item a {
   display: block;
+  width: 100%;
+  height: 100%;
 }
 .sc-works .works-item::before {
   content: "";
