@@ -152,20 +152,6 @@
 	background: url(../images/noise-bg.png) repeat;
 	z-index: 2;
 	height: 100vh;
-	// @include desktop {
-	// 	height: auto;
-	// }
-
-	// .content {
-	// 	position: relative;
-	// 	display: flex;
-	// 	flex-direction: column;
-	// 	padding: 10px 60px 120px;
-
-	// 	@include mobile {
-	// 		padding: 10px 16px 100px;
-	// 	}
-	// }
 
 	.title-area {
 		padding: 10px 60px 0;
@@ -209,7 +195,7 @@
 		position: absolute;
 		bottom: 160px;
 		right: 60px;
-		// margin-top: 189px;
+		margin-top: 189px;
 		@include desktop-m {
 			bottom: 120px;
 		}
@@ -277,7 +263,7 @@
 	.works-list {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(3, 300px);
+		grid-template-rows: repeat(3, 360px);
 		column-gap: 20px;
 		padding-bottom: 100px;
 		@include desktop {
@@ -403,7 +389,6 @@
 .sc-contact {
 	position: relative;
 	width: 100%;
-	height: 100vh;
 	background: url(../images/noise-bg.png) repeat;
 
 	.content {
@@ -415,9 +400,6 @@
 		color: #282828;
 		line-height: 1;
 		text-transform: uppercase;
-		@include tablet {
-			// padding: 30px 23px 80px 29px;
-		}
 
 		@include mobile {
 			padding: 10px 16px 60px;
@@ -452,26 +434,12 @@
 		}
 	}
 
-	.contact-area {
-		@include tablet {
-			position: absolute;
-			top: 50%;
-			right: 23px;
-			transform: translateY(-50%);
-		}
-
-		@include mobile {
-			right: 0;
-			left: 16px;
-		}
-	}
-
 	.contact-title {
 		display: flex;
 		justify-content: flex-end;
 		font-weight: 700;
 		font-size: 64px;
-		margin-bottom: 31px;
+		margin-bottom: 25px;
 		text-align: right;
 		overflow: hidden;
 		@include desktop {
@@ -532,41 +500,29 @@
 	}
 	.info-area {
 		display: flex;
-		flex-direction: column;
 		justify-content: space-between;
+		align-items: end;
+		padding-bottom: 60px;
 
 		@include tablet {
 			align-items: center;
-			position: absolute;
-			left: 0;
-			bottom: 80px;
+			margin-top: 20px;
 			width: 100%;
-			padding: 0 40px;
 			flex-direction: row;
+			padding-bottom: 40px;
 		}
 
 		@include mobile {
-			padding: 0 16px;
-			bottom: 30px;
+			padding-bottom: 0;
 			flex-direction: column;
 			align-items: flex-start;
 		}
-
-		// @include desktop-m {
-		// 	margin-top: 0;
-		// }
-		// @include desktop {
-		// 	margin-top: 20px;
-		// }
-		// @include mobile {
-		// 	margin-top: 100px;
-		// }
 
 		.info-list {
 			font-family: $font-kr;
 			font-weight: 500;
 			line-height: 1.4;
-			font-size: 32px;
+			font-size: 22px;
 			margin-bottom: 25px;
 			@include desktop {
 				font-size: 18px;
@@ -576,6 +532,7 @@
 			}
 			@include mobile {
 				font-size: 14px;
+				margin-bottom: 20px;
 			}
 			span {
 				display: block;
@@ -591,21 +548,14 @@
 
 	.rotate-article {
 		position: relative;
-		align-self: flex-end;
 		width: 80px;
 		height: 80px;
 		animation: rotateAnimation 12s linear infinite;
 		@include tablet {
-			align-self: center;
-			width: 60px;
-			height: 60px;
-		}
-		@include mobile {
-			align-self: flex-end;
 			width: 40px;
 			height: 40px;
 		}
-		> span {
+		> i {
 			position: absolute;
 			display: block;
 			width: 100%;
@@ -627,11 +577,8 @@
 				display: block;
 				width: 70px;
 				height: 3px;
-				@include tablet {
-					width: 70px;
-				}
 
-				@include mobile {
+				@include tablet {
 					height: 1px;
 					width: 40px;
 				}
@@ -644,9 +591,6 @@
 				width: 3px;
 				height: 80px;
 				@include tablet {
-					height: 70px;
-				}
-				@include mobile {
 					width: 1px;
 					height: 40px;
 				}
@@ -660,10 +604,6 @@
 				width: 3px;
 				height: 80px;
 				@include tablet {
-					height: 70px;
-					top: -4px;
-				}
-				@include mobile {
 					width: 1px;
 					height: 40px;
 					top: 0;
@@ -676,10 +616,6 @@
 				width: 3px;
 				height: 80px;
 				@include tablet {
-					height: 70px;
-					top: -4px;
-				}
-				@include mobile {
 					width: 1px;
 					height: 40px;
 					top: 0;

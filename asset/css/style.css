@@ -210,7 +210,7 @@ ol {
   line-height: 1;
   letter-spacing: -0.05em;
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .current-page {
     font-size: 12px;
     padding: 30px 16px;
@@ -248,7 +248,7 @@ ol {
     font-size: 14px;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .badge {
     font-size: 12px;
   }
@@ -323,7 +323,7 @@ ol {
   align-items: center;
   padding: 100px 0;
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .orbit {
     padding-bottom: 40px;
   }
@@ -352,7 +352,7 @@ ol {
     font-size: 32px;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .orbit .text-area {
     font-size: 18px;
   }
@@ -378,7 +378,7 @@ ol {
     width: 558px;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .orbit .orbit-context {
     margin: 200px 0;
   }
@@ -388,7 +388,7 @@ ol {
     display: none;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .orbit .orbit-context .path {
     display: none;
   }
@@ -412,7 +412,7 @@ ol {
     display: none;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .orbit .square {
     display: none;
   }
@@ -452,7 +452,7 @@ ol {
     padding-left: 40px;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .sc-about .title-area {
     font-size: 40px;
     padding-left: 16px;
@@ -469,6 +469,7 @@ ol {
   position: absolute;
   bottom: 160px;
   right: 60px;
+  margin-top: 189px;
 }
 @media (max-width: 1520px) {
   .sc-about .info-area {
@@ -481,7 +482,7 @@ ol {
     bottom: 100px;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .sc-about .info-area {
     bottom: 114px;
     right: 14px;
@@ -504,7 +505,7 @@ ol {
     font-size: 16px;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .sc-about .info-area p {
     font-size: 14px;
   }
@@ -536,7 +537,7 @@ ol {
 .sc-works .content {
   padding: 106px 60px;
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .sc-works .content {
     padding: 106px 20px;
   }
@@ -544,7 +545,7 @@ ol {
 .sc-works .works-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 300px);
+  grid-template-rows: repeat(3, 360px);
   -moz-column-gap: 20px;
        column-gap: 20px;
   padding-bottom: 100px;
@@ -567,7 +568,7 @@ ol {
     display: none;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .sc-works .works-list {
     grid-template-rows: repeat(7, 260px);
   }
@@ -662,7 +663,6 @@ ol {
 .sc-contact {
   position: relative;
   width: 100%;
-  height: 100vh;
   background: url(../images/noise-bg.png) repeat;
 }
 .sc-contact .content {
@@ -675,7 +675,7 @@ ol {
   line-height: 1;
   text-transform: uppercase;
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .sc-contact .content {
     padding: 10px 16px 60px;
   }
@@ -700,7 +700,7 @@ ol {
     font-size: 64px;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .sc-contact .title {
     font-size: 32px;
   }
@@ -708,26 +708,12 @@ ol {
 .sc-contact .title span {
   display: inline-block;
 }
-@media (max-width: 834px) {
-  .sc-contact .contact-area {
-    position: absolute;
-    top: 50%;
-    right: 23px;
-    transform: translateY(-50%);
-  }
-}
-@media (max-width: 414px) {
-  .sc-contact .contact-area {
-    right: 0;
-    left: 16px;
-  }
-}
 .sc-contact .contact-title {
   display: flex;
   justify-content: flex-end;
   font-weight: 700;
   font-size: 64px;
-  margin-bottom: 31px;
+  margin-bottom: 25px;
   text-align: right;
   overflow: hidden;
 }
@@ -737,7 +723,7 @@ ol {
     font-size: 36px;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .sc-contact .contact-title {
     justify-content: flex-start;
     -moz-text-align-last: left;
@@ -765,7 +751,7 @@ ol {
 .sc-contact .addr-box .phone-num {
   display: inline-block;
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .sc-contact .addr-box {
     -moz-text-align-last: left;
          text-align-last: left;
@@ -777,7 +763,7 @@ ol {
   justify-content: flex-end;
   overflow: hidden;
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .sc-contact .link-box {
     justify-content: flex-start;
     margin-top: 10px;
@@ -799,24 +785,22 @@ ol {
 }
 .sc-contact .info-area {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  align-items: end;
+  padding-bottom: 60px;
 }
 @media (max-width: 834px) {
   .sc-contact .info-area {
     align-items: center;
-    position: absolute;
-    left: 0;
-    bottom: 80px;
+    margin-top: 20px;
     width: 100%;
-    padding: 0 40px;
     flex-direction: row;
+    padding-bottom: 40px;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .sc-contact .info-area {
-    padding: 0 16px;
-    bottom: 30px;
+    padding-bottom: 0;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -825,7 +809,7 @@ ol {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 500;
   line-height: 1.4;
-  font-size: 32px;
+  font-size: 22px;
   margin-bottom: 25px;
 }
 @media (max-width: 1024px) {
@@ -838,9 +822,10 @@ ol {
     margin-bottom: 0;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .sc-contact .info-area .info-list {
     font-size: 14px;
+    margin-bottom: 20px;
   }
 }
 .sc-contact .info-area .info-list span {
@@ -858,7 +843,6 @@ ol {
 }
 .sc-contact .rotate-article {
   position: relative;
-  align-self: flex-end;
   width: 80px;
   height: 80px;
   -webkit-animation: rotateAnimation 12s linear infinite;
@@ -866,25 +850,17 @@ ol {
 }
 @media (max-width: 834px) {
   .sc-contact .rotate-article {
-    align-self: center;
-    width: 60px;
-    height: 60px;
-  }
-}
-@media (max-width: 414px) {
-  .sc-contact .rotate-article {
-    align-self: flex-end;
     width: 40px;
     height: 40px;
   }
 }
-.sc-contact .rotate-article > span {
+.sc-contact .rotate-article > i {
   position: absolute;
   display: block;
   width: 100%;
   height: 100%;
 }
-.sc-contact .rotate-article > span::after, .sc-contact .rotate-article > span::before {
+.sc-contact .rotate-article > i::after, .sc-contact .rotate-article > i::before {
   content: "";
   position: absolute;
   display: block;
@@ -900,11 +876,6 @@ ol {
 }
 @media (max-width: 834px) {
   .sc-contact .rotate-article .str::before {
-    width: 70px;
-  }
-}
-@media (max-width: 414px) {
-  .sc-contact .rotate-article .str::before {
     height: 1px;
     width: 40px;
   }
@@ -919,11 +890,6 @@ ol {
 }
 @media (max-width: 834px) {
   .sc-contact .rotate-article .str::after {
-    height: 70px;
-  }
-}
-@media (max-width: 414px) {
-  .sc-contact .rotate-article .str::after {
     width: 1px;
     height: 40px;
   }
@@ -936,12 +902,6 @@ ol {
   height: 80px;
 }
 @media (max-width: 834px) {
-  .sc-contact .rotate-article .rotate::before {
-    height: 70px;
-    top: -4px;
-  }
-}
-@media (max-width: 414px) {
   .sc-contact .rotate-article .rotate::before {
     width: 1px;
     height: 40px;
@@ -956,12 +916,6 @@ ol {
   height: 80px;
 }
 @media (max-width: 834px) {
-  .sc-contact .rotate-article .rotate::after {
-    height: 70px;
-    top: -4px;
-  }
-}
-@media (max-width: 414px) {
   .sc-contact .rotate-article .rotate::after {
     width: 1px;
     height: 40px;
