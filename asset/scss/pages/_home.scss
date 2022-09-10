@@ -1,4 +1,5 @@
 .cursor {
+	// opacity: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -201,11 +202,9 @@
 
 		@include tablet {
 			right: 40px;
-			// bottom: 100px;
 			bottom: 180px;
 		}
 		@include mobile {
-			// bottom: 114px;
 			bottom: 230px;
 			right: 14px;
 			width: 298px;

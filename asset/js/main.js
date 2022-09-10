@@ -1,6 +1,4 @@
 $(function () {
-	//커서 이벤트
-
 	gsap.to('.bg', {
 		autoAlpha: 1,
 		ease: 'power1.in',
@@ -12,70 +10,74 @@ $(function () {
 		},
 	});
 
-	const cursorW = 124;
-	const cursorH = 124;
+	// 	const cursorW = 124;
+	// 	const cursorH = 124;
 
-	$(window).mousemove(function (e) {
-		const xVal = e.clientX;
-		const yVal = e.clientY;
+	// 	$(window).mousemove(function (e) {
+	// 		const xVal = e.clientX;
+	// 		const yVal = e.clientY;
 
-		gsap.to('.cursor', {
-			x: xVal,
-			y: yVal,
-			width: cursorW,
-			height: cursorH,
-			xPercent: -50,
-			yPercent: -50,
-		});
-	});
+	// 		gsap.to('.cursor', {
+	// 			x: xVal,
+	// 			y: yVal,
+	// 			width: cursorW,
+	// 			height: cursorH,
+	// 			xPercent: -50,
+	// 			yPercent: -50,
+	// 		});
+	// 	});
 
-	$('span').mousemove(function (e) {
-		if ($(e.target).parents('.sc-about').length) {
-			$('.cursor').addClass('gradient');
-			$('.cursor').html('<span>scroll</span>');
-		} else if ($(e.target).parents('.sc-contact').length) {
-			$('.cursor').addClass('gradient');
-			$('.cursor').html('<span>contact me</span>');
-		}
-	});
+	// 	$(window).mousemove((e) => {
+	// 		$('cursor').css({ opacity: 1 });
+	// 	});
 
-	$('span').mouseout(function (e) {
-		$('.cursor').removeClass('gradient');
-		$('.cursor').html('<span>scroll</span>');
-	});
+	// 	$('span').mousemove(function (e) {
+	// 		if ($(e.target).parents('.sc-about').length) {
+	// 			$('.cursor').addClass('gradient');
+	// 			$('.cursor').html('<span>scroll</span>');
+	// 		} else if ($(e.target).parents('.sc-contact').length) {
+	// 			$('.cursor').addClass('gradient');
+	// 			$('.cursor').html('<span>contact me</span>');
+	// 		}
+	// 	});
 
-	$('h1').mousemove(function (e) {
-		$('.cursor').addClass('gradient');
-		$('.cursor').html('<span>scroll</span>');
-	});
+	// 	$('span').mouseout(function (e) {
+	// 		$('.cursor').removeClass('gradient');
+	// 		$('.cursor').html('<span>scroll</span>');
+	// 	});
 
-	$('h1').mouseout(function (e) {
-		$('.cursor').removeClass('gradient');
-		$('.cursor').html('<span>scroll</span>');
-	});
+	// 	$('h1').mousemove(function (e) {
+	// 		$('.cursor').addClass('gradient');
+	// 		$('.cursor').html('<span>scroll</span>');
+	// 	});
 
-	$('a').mousemove(function (e) {
-		if ($(e.target).parents('.works-item').length) {
-			$('.cursor').addClass('fff');
-			$('.cursor').html('<span>click</span>');
-		} else if ($(e.target).parents('.addr-box').length) {
-			$('.cursor').addClass('gradient');
-			$('.cursor').html('<span>contact me</span>');
-		} else if ($(e.target).parents('.link-box').length) {
-			$('.cursor').addClass('gradient');
-			$('.cursor').html('<span>click</span>');
-		} else {
-			$('.cursor').html('<span>scroll</span>');
-		}
-	});
+	// 	$('h1').mouseout(function (e) {
+	// 		$('.cursor').removeClass('gradient');
+	// 		$('.cursor').html('<span>scroll</span>');
+	// 	});
 
-	$('a').mouseout(function (e) {
-		$('.cursor').removeClass('fff');
-		$('.cursor').removeClass('gradient');
-		$('.cursor').html('<span>scroll</span>');
-	});
+	// 	$('a').mousemove(function (e) {
+	// 		if ($(e.target).parents('.works-item').length) {
+	// 			$('.cursor').addClass('fff');
+	// 			$('.cursor').html('<span>click</span>');
+	// 		} else if ($(e.target).parents('.addr-box').length) {
+	// 			$('.cursor').addClass('gradient');
+	// 			$('.cursor').html('<span>contact me</span>');
+	// 		} else if ($(e.target).parents('.link-box').length) {
+	// 			$('.cursor').addClass('gradient');
+	// 			$('.cursor').html('<span>click</span>');
+	// 		} else {
+	// 			$('.cursor').html('<span>scroll</span>');
+	// 		}
+	// 	});
 
-	// orbit
+	// 	$('a').mouseout(function (e) {
+	// 		$('.cursor').removeClass('fff');
+	// 		$('.cursor').removeClass('gradient');
+	// 		$('.cursor').html('<span>scroll</span>');
+	// 	});
+
+	// 	// orbit
 
 	var path = anime.path('.orbit-context path');
 	var motionPath = anime({
@@ -88,7 +90,7 @@ $(function () {
 		loop: true,
 	});
 
-	// text reveal animation
+	// 	// text reveal animation
 
 	gsap.to('.orbit .text-area p', {
 		backgroundPositionX: '0%',
