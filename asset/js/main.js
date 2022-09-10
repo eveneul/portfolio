@@ -1,8 +1,4 @@
 $(function () {
-	$(window).resize(() => {
-		location.reload();
-	});
-
 	//커서 이벤트
 
 	gsap.to('.bg', {
