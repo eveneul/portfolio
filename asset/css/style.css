@@ -292,6 +292,7 @@ ol {
 @media (max-width: 834px) {
   .cursor {
     display: none;
+    opacity: 0;
   }
 }
 
