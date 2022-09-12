@@ -454,7 +454,7 @@ ol {
 @media (max-width: 480px) {
   .sc-about .title-area {
     padding-left: 16px;
-    padding-top: 180px;
+    padding-top: 40%;
   }
 }
 .sc-about .title-area p {
@@ -483,7 +483,7 @@ ol {
 }
 @media (max-width: 480px) {
   .sc-about .info-area {
-    bottom: 230px;
+    bottom: 20%;
     right: 14px;
     width: 298px;
   }
